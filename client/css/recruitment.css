@@ -1,0 +1,180 @@
+.mainIcon {
+  display: inline-block;
+}
+
+.classIcon {
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  background-size: 120% 120%;
+  border: 1px solid black;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.specIcon {
+  margin-bottom: 1px;
+}
+
+.spec {
+  z-index: 1010;
+}
+
+/*
+  Class Icons
+*/
+
+#deathknightIcon {
+  background-image: url("/images/class/deathknight/deathknight.png");
+}
+
+#druidIcon {
+  background-image: url("/images/class/druid/druid.png");
+}
+
+#hunterIcon {
+  background-image: url("/images/class/hunter/hunter.png");
+}
+
+#mageIcon {
+  background-image: url("/images/class/mage/mage.png");
+}
+
+#monkIcon {
+  background-image: url("/images/class/monk/monk.png");
+}
+
+#paladinIcon {
+  background-image: url("/images/class/paladin/paladin.png");
+}
+#priestIcon {
+  background-image: url("/images/class/priest/priest.png");
+}
+#rogueIcon {
+  background-image: url("/images/class/rogue/rogue.png");
+}
+#shamanIcon {
+  background-image: url("/images/class/shaman/shaman.png");
+}
+#warlockIcon {
+  background-image: url("/images/class/warlock/warlock.png");
+}
+#warriorIcon {
+  background-image: url("/images/class/warrior/warrior.png");
+}
+
+/*
+  Spec Icons
+*/
+
+#deathknightBlood {
+  background-image: url("/images/class/deathknight/blood.png");
+}
+#deathknightFrost {
+  background-image: url("/images/class/deathknight/frost.png");
+}
+#deathknightUnholy {
+  background-image: url("/images/class/deathknight/unholy.png");
+}
+
+#druidBalance {
+  background-image: url("/images/class/druid/balance.png");
+}
+#druidFeral {
+  background-image: url("/images/class/druid/feral.png");
+}
+#druidGuardian {
+  background-image: url("/images/class/druid/guardian.png");
+}
+#druidRestoration {
+  background-image: url("/images/class/druid/restoration.png");
+}
+
+#hunterBeastMastery {
+  background-image: url("/images/class/hunter/beastmastery.png");
+}
+#hunterMarksman {
+  background-image: url("/images/class/hunter/marksman.png");
+}
+#hunterSurvival {
+  background-image: url("/images/class/hunter/survival.png");
+}
+
+#mageArcane {
+  background-image: url("/images/class/mage/arcane.png");
+}
+#mageFire {
+  background-image: url("/images/class/mage/fire.png");
+}
+#mageFrost {
+  background-image: url("/images/class/mage/frost.png");
+}
+
+#monkBrewmaster {
+  background-image: url("/images/class/monk/brewmaster.png");
+}
+#monkMistweaver {
+  background-image: url("/images/class/monk/mistweaver.png");
+}
+#monkWindwalker {
+  background-image: url("/images/class/monk/windwalker.png");
+}
+
+#paladinHoly {
+  background-image: url("/images/class/paladin/holy.png");
+}
+#paladinProtection {
+  background-image: url("/images/class/paladin/protection.png");
+}
+#paladinRetribution {
+  background-image: url("/images/class/paladin/retribution.png");
+}
+
+#priestDiscipline {
+  background-image: url("/images/class/priest/discipline.png");
+}
+#priestHoly {
+  background-image: url("/images/class/priest/holy.png");
+}
+#priestShadow {
+  background-image: url("/images/class/priest/shadow.png");
+}
+
+#rogueAssassination {
+  background-image: url("/images/class/rogue/assassination.png");
+}
+#rogueCombat {
+  background-image: url("/images/class/rogue/combat.png");
+}
+#rogueSubtlety {
+  background-image: url("/images/class/rogue/subtlety.png");
+}
+
+#shamanElemental {
+  background-image: url("/images/class/shaman/elemental.png");
+}
+#shamanEnhancement {
+  background-image: url("/images/class/shaman/enhancement.png");
+}
+#shamanRestoration {
+  background-image: url("/images/class/shaman/restoration.png");
+}
+
+#warlockAffliction {
+  background-image: url("/images/class/warlock/affliction.png");
+}
+#warlockDemonology {
+  background-image: url("/images/class/warlock/demonology.png");
+}
+#warlockDestruction {
+  background-image: url("/images/class/warlock/destruction.png");
+}
+
+#warriorArms {
+  background-image: url("/images/class/warrior/arms.png");
+}
+#warriorFury {
+  background-image: url("/images/class/warrior/fury.png");
+}
+#warriorProtection {
+  background-image: url("/images/class/warrior/protection.png");
+}
