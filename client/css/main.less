@@ -1,0 +1,106 @@
+html, body, p, h1, h2, h3, div, li, a {
+  font-family: 'Roboto', sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.centerMe {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#__blaze-root {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  background-image: url("/images/blueSpace.jpg");
+  background-attachment: fixed;
+  min-height: 100%;
+  min-width: 100%;
+
+  #header {
+    height: 8rem;
+  }
+
+  #headerContainer {
+    margin-bottom: 2rem;
+  }
+
+  #headerText {
+    height: 8rem;
+    line-height: 8rem;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+  }
+
+  #mainNav {
+    height: 3rem;
+  }
+
+  #mainNav a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .nav {
+    text-align: center;
+  }
+
+  #recruitment {
+    width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .grayscale {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+  }
+
+  .post {
+    background-color: rgba(28, 28, 28, 0.7);
+    border: 1px solid black;
+    padding: 0.5rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .postHeader {
+    margin-bottom: 0.2rem;
+    font-size: 1.5rem;
+  }
+
+  .postContent {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .postContent p {
+    margin-bottom: 0px;
+  }
+
+  .postContent img {
+    max-width: 100%;
+    border: 1px solid black;
+  }
+
+  @media (max-width: 767px) {
+    .postRow {
+      padding: 0px 10px;
+    }
+  }
+}

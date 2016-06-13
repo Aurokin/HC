@@ -1,0 +1,12 @@
+<template name="admin">
+  <div id="admin" class="container-fluid">
+    <div id="adminRow" class="row">
+      <div class="col-sm-4 col-lg-2" id="adminPanel">
+        {{>Template.dynamic template=panel}}
+      </div>
+      <div class="col-sm-8 col-lg-10" id="adminContent">
+        {{>Template.dynamic template=content}}
+      </div>
+    </div>
+  </div>
+</template>

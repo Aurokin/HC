@@ -1,0 +1,77 @@
+<template name="adminContent">
+  <div id="postPanel">
+    <div class="row">
+      <div class="col-xs-12 adminHeader">
+        Posts
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="newPostCard" class="card card-block">
+          <h3 class="card-title">New Post</h3>
+          <form id="newPost">
+            <fieldset>
+              <label for="newPostHeader">Header</label>
+              <input type="text" class="form-control" id="newPostHeader" placeholder="Enter Title">
+            </fieldset>
+            <fieldset>
+              <label for="newPostImage">Image</label>
+              <input type="text" class="form-control" id="newPostImage" placeholder="Enter Image Link">
+              <small class="text-muted">Please Link To The Image, Example: http://i.imgur.com/N0i3TMh.png</small>
+            </fieldset>
+            <fieldset>
+              <label for="newPostText">Text</label>
+              <textarea class="form-control" id="newPostText" placeholder="Enter Text" rows="3"></textarea>
+              <small class="text-muted">Use Markdown Syntax</small>
+            </fieldset>
+            <fieldset>
+              <label for="newPostDate">Date</label>
+              <input type="date" class="form-control" id="newPostDate" placeholder="Enter Date">
+            </fieldset>
+            <button type="submit" class="btn btn-primary submit-post">Create Post</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="currentPosts">
+      {{#each posts}}
+        {{> editPost}}
+      {{/each}}
+    </div>
+  </div>
+  <div id="recruitmentPanel" class="hidden">
+    Yo
+  </div>
+</template>
+
+<template name="editPost">
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="{{_id}}-card" class="card card-block editPostCard">
+        <h3 class="card-title">{{_id}} - {{header}}</h3>
+        <form id="{{_id}}" class="currentPost">
+          <fieldset>
+            <label for="{{_id}}-PostHeader">Header</label>
+            <input type="text" class="form-control" id="{{_id}}-PostHeader" placeholder="Enter Title" value="{{header}}">
+          </fieldset>
+          <fieldset>
+            <label for="{{_id}}-PostImage">Image</label>
+            <input type="text" class="form-control" id="{{_id}}-PostImage" placeholder="Enter Image Link" value="{{image}}">
+            <small class="text-muted">Please Link To The Image, Example: http://i.imgur.com/N0i3TMh.png</small>
+          </fieldset>
+          <fieldset>
+            <label for="{{_id}}-PostText">Text</label>
+            <textarea class="form-control" id="{{_id}}-PostText" placeholder="Enter Text" value="{{text}}"></textarea>
+            <small class="text-muted">Use Markdown Syntax</small>
+          </fieldset>
+          <fieldset>
+            <label for="{{_id}}-PostDate">Date</label>
+            <input type="date" class="form-control" id="{{_id}}-PostDate" placeholder="Enter Date" value="{{date}}">
+          </fieldset>
+          <button type="submit" class="btn btn-primary">Edit Post</button>
+          <button class="btn btn-danger deletePost">Delete Post</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>

@@ -23,3 +23,6 @@ kadira:flow-router
 kadira:blaze-layout
 orgztion:meteor-global-tether
 twbs:bootstrap@4.0.0-alpha.2
+less
+momentjs:moment
+markdown
