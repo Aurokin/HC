@@ -1,3 +1,8 @@
+accounts-base@1.2.7
+accounts-oauth@1.1.12
+accounts-ui@1.1.9
+accounts-ui-unstyled@1.1.12
+afrazer:battlenet@1.0.3
 allow-deny@1.0.4
 autopublish@1.0.7
 autoupdate@1.2.9
@@ -16,6 +21,7 @@ check@1.2.1
 ddp@1.2.5
 ddp-client@1.2.7
 ddp-common@1.2.5
+ddp-rate-limiter@1.0.4
 ddp-server@1.2.6
 deps@1.0.12
 diff-sequence@1.0.5
@@ -37,6 +43,7 @@ kadira:flow-router@2.12.1
 launch-screen@1.0.11
 less@2.6.0
 livedata@1.0.18
+localstorage@1.0.9
 logging@1.0.12
 markdown@1.0.9
 meteor@1.1.14
@@ -52,16 +59,21 @@ momentjs:moment@2.13.1
 mongo@1.1.7
 mongo-id@1.0.4
 npm-mongo@1.4.43
+oauth@1.1.10
+oauth2@1.1.9
 observe-sequence@1.0.11
 ordered-dict@1.0.7
 orgztion:meteor-global-tether@1.0.0
 promise@0.6.7
 random@1.0.9
+rate-limit@1.0.4
 reactive-dict@1.1.7
 reactive-var@1.0.9
 reload@1.1.8
 retry@1.0.7
 routepolicy@1.0.10
+service-configuration@1.0.9
+session@1.1.5
 spacebars@1.0.11
 spacebars-compiler@1.0.11
 standard-minifier-css@1.0.6

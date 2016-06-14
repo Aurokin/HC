@@ -26,3 +26,7 @@ twbs:bootstrap@4.0.0-alpha.2
 less
 momentjs:moment
 markdown
+accounts-base
+service-configuration
+accounts-ui
+afrazer:battlenet
