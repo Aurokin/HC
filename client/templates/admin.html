@@ -1,4 +1,5 @@
 <template name="admin">
+  {{#if isInRole 'admin'}}
   <div id="admin" class="container-fluid">
     <div id="adminRow" class="row">
       <div class="col-sm-4 col-lg-2" id="adminPanel">
@@ -9,4 +10,9 @@
       </div>
     </div>
   </div>
+  {{else}}
+  <div class="container-fluid">
+    Not an admin yo!
+  </div>
+  {{/if}}
 </template>

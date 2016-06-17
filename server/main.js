@@ -1,20 +1,46 @@
 import { Meteor } from 'meteor/meteor';
 
 Meteor.startup(() => {
-  // code to run on server at startup
-  SecretKey.remove({});
-  SecretKey.insert({"key": "1L1rFIOyS4MhHF66MkDaQxp7RtfmQ2r8"});
+  //Meteor.users.remove({});
 
+  // Configure Battle Net Configurations
   ServiceConfiguration.configurations.remove({
     service: "battlenet"
   });
 
   ServiceConfiguration.configurations.insert({
     service: "battlenet",
-    clientId: "sjnxk44yek97g8vp5y9cjca3mymep8jf",
+    clientId: Meteor.settings.bnetClientID,
     scope:'wow.profile',
-    secret: "3UWXbm3uVMw28k6RuBzam8j5dm8tTqbP"
+    secret: Meteor.settings.bnetSecret
   });
 
-  console.log(Meteor.absoluteUrl());
+  Meteor.methods({
+    loginRoleCheck: function() {
+      const user = Meteor.user();
+      const userId = Meteor.userId();
+      if (Meteor.settings.adminWhitelist) {
+        // Admin Stuff
+        for (i = 0; i < Meteor.settings.adminWhitelist.length; i++) {
+          if (Meteor.settings.adminWhitelist[i] == user.profile.tag) {
+            Roles.addUsersToRoles(userId, ['admin']);
+          }
+        }
+      }
+      if (!_.isEmpty(user.profile.characters)) {
+        // Characters Role Comparisons
+      }
+    }
+  });
+
+  Accounts.onCreateUser((options, user) => {
+    //console.log(options);
+    user._id = user.services.battlenet.id.toString();
+    user.profile = options.profile;
+    //console.log(user);
+
+    return user;
+  });
+
+  //console.log(Meteor.absoluteUrl());
 });
