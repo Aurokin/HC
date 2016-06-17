@@ -11,8 +11,10 @@ Meteor.startup(() => {
 
   ServiceConfiguration.configurations.insert({
     service: "battlenet",
-    clientId: "unqvmbute4n2gxd6nfhetvhxwjj7eqws",
+    clientId: "sjnxk44yek97g8vp5y9cjca3mymep8jf",
     scope:'wow.profile',
-    secret: "PwtVEGMdju3dUNx7UFcfBNUhTz7WH2y7"
+    secret: "3UWXbm3uVMw28k6RuBzam8j5dm8tTqbP"
   });
+
+  console.log(Meteor.absoluteUrl());
 });
