@@ -1,5 +1,5 @@
 <template name="adminContent">
-  <div id="postPanel">
+  <div id="postPanel" class="adminPanel">
     <div class="row">
       <div class="col-xs-12 adminHeader">
         Posts
@@ -39,7 +39,7 @@
       {{/each}}
     </div>
   </div>
-  <div id="recruitmentPanel" class="hidden">
+  <div id="recruitmentPanel" class="adminPanel hidden">
     Yo
   </div>
 </template>
@@ -48,8 +48,8 @@
   <div class="row">
     <div class="col-xs-12">
       <div id="{{_id}}-card" class="card card-block editPostCard">
-        <h3 class="card-title">{{_id}} - {{header}}</h3>
-        <form id="{{_id}}" class="currentPost">
+        <h3 class="card-title currentPostTitle">{{_id}} - {{header}}</h3>
+        <form id="{{_id}}" class="currentPost hidden">
           <fieldset>
             <label for="{{_id}}-PostHeader">Header</label>
             <input type="text" class="form-control" id="{{_id}}-PostHeader" placeholder="Enter Title" value="{{header}}">

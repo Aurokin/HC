@@ -8,6 +8,17 @@ Template.adminContent.rendered = function() {
   $('#newPostDate').val(new Date().toDateInputValue());
 };
 
+Template.adminPanel.events({
+  'click .adminSelector'(event) {
+    if (!$('#' + event.target.id).hasClass('adminSelected')) {
+      $('.adminPanel').toggleClass('hidden');
+    }
+    $('.adminSelector').removeClass('adminSelected');
+    $('#' + event.target.id).addClass('adminSelected');
+
+  }
+});
+
 Template.adminContent.events({
   'submit #newPost'(event) {
     event.preventDefault();
@@ -42,6 +53,10 @@ Template.adminContent.events({
       text,
       date,
     });
+  },
+
+  'click .currentPostTitle'(event) {
+    $('#' + this._id).toggleClass('hidden');
   },
 
   'click .deletePost'() {
