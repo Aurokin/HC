@@ -1,6 +1,19 @@
 Template.adminContent.helpers({
   posts: function() {
     return Posts.find({}, {sort: {date: -1} });
+  },
+
+  roster: function() {
+    return Roster.find({}, {sort: {class: 1, name: 1} });
+  },
+
+  classCSS: function(classNum) {
+    const css = Classes.findOne({num: classNum});
+    if (css) {
+      return css.css;
+    } else {
+      return null;
+    }
   }
 });
 
@@ -10,12 +23,13 @@ Template.adminContent.rendered = function() {
 
 Template.adminPanel.events({
   'click .adminSelector'(event) {
+    const panel = $('#' + event.target.id).attr('panel');
     if (!$('#' + event.target.id).hasClass('adminSelected')) {
-      $('.adminPanel').toggleClass('hidden');
+      $('.adminPanel').addClass('hidden');
+      $('#' + panel).removeClass('hidden');
     }
     $('.adminSelector').removeClass('adminSelected');
     $('#' + event.target.id).addClass('adminSelected');
-
   }
 });
 
@@ -61,5 +75,13 @@ Template.adminContent.events({
 
   'click .deletePost'() {
     Posts.remove(this._id);
+  },
+
+  'click #refreshRoster'() {
+    console.log('hi');
+    Meteor.call('getGuildMembers', 'Burning Legion', 'HC', function(error, members) {
+      console.log(members);
+      console.log(error);
+    });
   },
 });

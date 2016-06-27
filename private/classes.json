@@ -1,0 +1,48 @@
+{
+  "classes": [
+    { "name": "Warrior",
+      "num": 1,
+      "css": "warrior"
+    },
+    { "name": "Paladin",
+      "num": 2,
+      "css": "paladin"
+    },
+    { "name": "Hunter",
+      "num": 3,
+      "css": "hunter"
+    },
+    { "name": "Rogue",
+      "num": 4,
+      "css": "rogue"
+    },
+    { "name": "Priest",
+      "num": 5,
+      "css": "priest"
+    },
+    { "name": "Death Knight",
+      "num": 6,
+      "css": "deathKnight"
+    },
+    { "name": "Shaman",
+      "num": 7,
+      "css": "shaman"
+    },
+    { "name": "Mage",
+      "num": 8,
+      "css": "mage"
+    },
+    { "name": "Warlock",
+      "num": 9,
+      "css": "warlock"
+    },
+    { "name": "Monk",
+      "num": 10,
+      "css": "monk"
+    },
+    { "name": "Druid",
+      "num": 11,
+      "css": "druid"
+    }
+  ]
+}

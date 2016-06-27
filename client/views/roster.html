@@ -1,3 +1,18 @@
 <template name="roster">
-  Roster
+  <div class="row">
+    <div class="post col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xl-6 col-xl-offset-3">
+      <div id="rosterMain">
+        <p id="rosterName">?</p>
+        <p id="rosterClass">?</p>
+        <p id="rosterRank">?</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="post col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xl-6 col-xl-offset-3">
+      {{#each roster}}
+        <button id="{{_id}}" class="btn btn-danger {{classCSS class}} rosterBtn" image="{{image}}" wowClass="{{className class}}" rank="{{rankH rank}}">{{name}}</button>
+      {{/each}}
+    </div>
+  </div>
 </template>

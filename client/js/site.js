@@ -28,19 +28,58 @@ Template.blogHome.helpers({
   }
 });
 
-Template.header.rendered = function() {
-  $('.classIcon').hover(recruitmentHoverOn, recruitmentHoverOff);
-};
+Template.roster.helpers({
+  roster: function() {
+    return Roster.find({}, {sort: {class: 1, name: 1} });
+  },
 
-Template.adminLogin.events({
-  'submit #adminLogin'(event) {
-    event.preventDefault();
-    const key = event.target.adminKey.value;
-    const search = SecretKey.findOne({"key": key});
-    if (search) {
-      //window.location.href = "/admin";
+  classCSS: function(classNum) {
+    const css = Classes.findOne({num: classNum});
+    if (css) {
+      return css.css;
     } else {
-      // Declined
+      return null;
+    }
+  },
+
+  className: function(classNum) {
+    const css = Classes.findOne({num: classNum});
+    if (css) {
+      return css.name;
+    } else {
+      return null;
+    }
+  },
+
+  rankH: function(rank) {
+    const rankDb = Ranks.findOne({num: rank});
+    if (rankDb) {
+      return rankDb.name;
+    } else {
+      return null;
     }
   }
 });
+
+Template.roster.events({
+  'click .rosterBtn'(event) {
+    const id = event.target.id;
+    const image = $('#' + id).attr('image');
+    const name = $('#' + id).text();
+    const wowClass = $('#' + id).attr('wowClass');
+    const rank = $('#' + id).attr('rank');
+    const fullLink = 'https://render-api-us.worldofwarcraft.com/static-render/us/' + image + '-profilemain.jpg';
+
+    console.log(id);
+    console.log(image);
+    console.log(fullLink);
+    $('#rosterMain').css('background-image', "url("+fullLink+")");
+    $('#rosterName').text(name);
+    $('#rosterClass').text(wowClass);
+    $('#rosterRank').text(rank);
+  }
+});
+
+Template.header.rendered = function() {
+  $('.classIcon').hover(recruitmentHoverOn, recruitmentHoverOff);
+};

@@ -1,0 +1,16 @@
+{
+  "ranks": [
+    {
+      "name": "Guild Master",
+      "num": 0
+    },
+    {
+      "name": "Officer",
+      "num": 1
+    },
+    {
+      "name": "Raider",
+      "num": 3
+    }
+  ]
+}

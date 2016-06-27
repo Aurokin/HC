@@ -1,5 +1,25 @@
 <template name="adminContent">
-  <div id="postPanel" class="adminPanel">
+  <div id="armoryPanel" class="adminPanel">
+    <div class="row">
+      <div class="col-xs-12 adminHeader">
+        Armory
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="card card-block">
+          <h3 class="card-title">Roster</h3>
+          <button id="refreshRoster" class="btn btn-primary">Click Me</button>
+          <p>
+            {{#each roster}}
+              <span class="{{classCSS class}}">{{name}}</span>
+            {{/each}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="postPanel" class="adminPanel hidden">
     <div class="row">
       <div class="col-xs-12 adminHeader">
         Posts
