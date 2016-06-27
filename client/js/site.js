@@ -69,6 +69,11 @@ Template.roster.events({
     const wowClass = $('#' + id).attr('wowClass');
     const rank = $('#' + id).attr('rank');
     const fullLink = 'https://render-api-us.worldofwarcraft.com/static-render/us/' + image + '-profilemain.jpg';
+    /*
+      Avatar: https://render-api-us.worldofwarcraft.com/static-render/us/agamaggan/247/131265783-avatar.jpg
+      Profile: https://render-api-us.worldofwarcraft.com/static-render/us/agamaggan/247/131265783-profilemain.jpg
+      Inset: https://render-api-us.worldofwarcraft.com/static-render/us/agamaggan/247/131265783-inset.jpg
+    */
 
     console.log(id);
     console.log(image);
